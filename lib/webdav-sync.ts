@@ -639,7 +639,7 @@ export class WebDAVSyncManager {
     }
 
     const Database = require('better-sqlite3');
-    let tempDb = null;
+    let tempDb: any = null;
 
     try {
       const remotePath = `/literature-review-ai/backups/database/${filename}`;
