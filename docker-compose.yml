@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    image: ghcr.io/nssanc/ai-writer:latest
+    # 如果要本地构建，注释上面一行，取消注释下面一行
+    # build: .
+    ports:
+      - "3333:3000"
+    volumes:
+      - ./data:/app/data
+      - ./uploads:/app/uploads
+      - ./outputs:/app/outputs
+    environment:
+      - NODE_ENV=production
+      - OPENAI_API_ENDPOINT=${OPENAI_API_ENDPOINT}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4}
+    restart: unless-stopped

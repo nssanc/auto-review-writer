@@ -1,0 +1,41 @@
+{
+  "name": "literature-review-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3333 --webpack",
+    "build": "next build --webpack",
+    "start": "next start -p 3333",
+    "lint": "eslint",
+    "db:init": "tsx scripts/init-db.ts"
+  },
+  "dependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/markdown-it": "^14.1.2",
+    "@types/xml2js": "^0.4.14",
+    "axios": "^1.13.2",
+    "better-sqlite3": "^12.6.0",
+    "mammoth": "^1.11.0",
+    "markdown-it": "^14.1.0",
+    "mermaid": "^11.12.2",
+    "next": "16.1.2",
+    "openai": "^6.16.0",
+    "pdf-parse": "^1.1.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "webdav": "^5.8.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.2",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
