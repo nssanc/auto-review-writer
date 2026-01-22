@@ -112,7 +112,7 @@ export default function APIManagementPage() {
 
       if (result.success) {
         // 去重模型列表
-        const uniqueModels = Array.from(new Set(result.data));
+        const uniqueModels = Array.from(new Set(result.data as string[]));
         setAvailableModels(uniqueModels);
         setMessage(`✅ 连接成功！找到 ${uniqueModels.length} 个可用模型`);
       } else {
