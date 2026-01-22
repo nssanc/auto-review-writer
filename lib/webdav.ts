@@ -162,7 +162,7 @@ export class WebDAVService {
 
     try {
       const dirPath = path.dirname(remotePath);
-      await this.ensureDirectoryExists(dirPath);
+      await this.ensureDirectory(dirPath);
       await this.client.putFileContents(remotePath, content, { overwrite: true });
       console.log(`✅ Uploaded content: ${remotePath}`);
     } catch (error: any) {
