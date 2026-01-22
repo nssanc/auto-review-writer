@@ -25,7 +25,6 @@ export class WebDAVService {
       this.client = createClient(config.url, {
         username: config.username,
         password: config.password,
-        timeout: config.timeout || 30000,
       });
 
       // 测试连接
