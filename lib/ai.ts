@@ -643,6 +643,7 @@ ${maxResults < papers.length ? `请筛选出最相关的${maxResults}篇文献�
       model: this.currentModel,
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.3,
+    }, {
       timeout: 120000, // 120秒超时
     });
 
