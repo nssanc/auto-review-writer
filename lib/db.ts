@@ -166,7 +166,7 @@ export function initDatabase() {
 
   // 迁移旧的 ai_config 数据（如果存在旧数据且没有 name 字段）
   try {
-    const columns = db.pragma('table_info(ai_config)');
+    const columns = db.pragma('table_info(ai_config)') as any[];
     const hasNameColumn = columns.some((col: any) => col.name === 'name');
 
     if (!hasNameColumn) {
